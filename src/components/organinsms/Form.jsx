@@ -117,15 +117,9 @@ function Form() {
 
     const handleYearChange = (e) => {
         const year = e.target.value;
-        if (year > 2024) {
-            Swal.fire('Error', "No puede ser mayor del 2024", 'error');
-            return;
-        }
-        if (year < 2000) {
-            Swal.fire('Error', "No puede ser menor del 2000", 'error');
-            return;
-        }
+    if (year <= 2024 && year >= 2000) {
         setAno(year);
+    }
     };
 
     return ( 
@@ -176,8 +170,40 @@ function Form() {
                         </label>
                         <label>
                         <select className="input bg-white border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2" onChange={e => setEstado(e.target.value)}>
-                            <option value="">Selecciona un estado</option>
-                            <option value="CS">Chiapas</option>                
+                            <option value="">Selecciona un estado</option>    
+                            <option value="AS">Aguascalientes</option>
+                            <option value="BC">Baja California</option>
+                            <option value="BS">Baja California Sur</option>
+                            <option value="CC">Campeche</option>
+                            <option value="CS">Chiapas</option> 
+                            <option value="CH">Chihuahua</option>
+                            <option value="CL">Coahuila</option>
+                            <option value="CM">Colima</option>
+                            <option value="DG">Durango</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GT">Guanajuato</option>
+                            <option value="GR">Guerrero</option>
+                            <option value="HG">Hidalgo</option>
+                            <option value="JC">Jalisco</option>
+                            <option value="MN">Michoacán</option>
+                            <option value="MS">Morelos</option>
+                            <option value="MC">México</option>
+                            <option value="NT">Nayarit</option>
+                            <option value="NL">Nuevo León</option>
+                            <option value="OC">Oaxaca</option>
+                            <option value="PL">Puebla</option>
+                            <option value="QT">Querétaro</option>
+                            <option value="QR">Quintana Roo</option>
+                            <option value="SP">San Luis Potosí</option>
+                            <option value="SL">Sinaloa</option>
+                            <option value="SR">Sonora</option>
+                            <option value="TC">Tabasco</option>
+                            <option value="TS">Tamaulipas</option>
+                            <option value="TL">Tlaxcala</option>
+                            <option value="VZ">Veracruz</option>
+                            <option value="YN">Yucatán</option>
+                            <option value="ZS">Zacatecas</option>                            
+                                           
                         </select>
                     </label>
                     <div className="flex justify-center mt-5">
